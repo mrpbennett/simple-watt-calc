@@ -1,27 +1,28 @@
 $(document).ready(function () {
 
+
     // maximal power out calc
     function malePwrCalc() {
 
-        console.log($('#current-weight').val())
+        console.log($('#current-weight-kg').val())
 
         //5s pwr
-        var pwr5s = parseInt($('#pwr-5s-input').val()) / parseInt($('#current-weight').val())
+        var pwr5s = parseInt($('#pwr-5s-input').val()) / parseInt($('#current-weight-kg').val())
         console.log('5 sec power ' + pwr5s.toFixed(2))
         $('#pwr-5s-output').val(pwr5s.toFixed(2))
 
         //1min pwr
-        var pwr1min = parseInt($('#pwr-1min-input').val()) / parseInt($('#current-weight').val())
+        var pwr1min = parseInt($('#pwr-1min-input').val()) / parseInt($('#current-weight-kg').val())
         console.log('1 min power ' + pwr1min.toFixed(2))
         $('#pwr-1min-output').val(pwr1min.toFixed(2))
 
         //5min pwr
-        var pwr5min = parseInt($('#pwr-5min-input').val()) / parseInt($('#current-weight').val())
+        var pwr5min = parseInt($('#pwr-5min-input').val()) / parseInt($('#current-weight-kg').val())
         console.log('5 min power ' + pwr5min.toFixed(2))
         $('#pwr-5min-output').val(pwr5min.toFixed(2))
 
         //ftp pwr
-        var pwrftp = parseInt($('#pwr-ftp-input').val()) / parseInt($('#current-weight').val())
+        var pwrftp = parseInt($('#pwr-ftp-input').val()) / parseInt($('#current-weight-kg').val())
         console.log('FTP power ' + pwrftp.toFixed(2))
         $('#pwr-ftp-output').val(pwrftp.toFixed(2))
 
@@ -43,7 +44,7 @@ $(document).ready(function () {
         } else if (pwr5s < 24.04 && pwr5s > 21.86) {
             $('#class-5s').text('World Class - International Pro')
         } else {
-            $('#class-5s').text('You need to work on this!')
+            $('#class-5s').text('You need to work on this!').addClass('alert alert-danger')
         }
 
         // 1m ranking 
@@ -64,7 +65,7 @@ $(document).ready(function () {
         } else if (pwr1min < 11.50 && pwr1min > 10.58) {
             $('#class-1min').text('World Class - International Pro')
         } else {
-            $('#class-1min').text('You need to work on this!')
+            $('#class-1min').text('You need to work on this!').addClass('alert alert-danger')
         }
 
         // 5min ranking
@@ -85,7 +86,7 @@ $(document).ready(function () {
         } else if (pwr5min < 7.60 && pwr5min > 6.77) {
             $('#class-5min').text('World Class - International Pro')
         } else {
-            $('#class-5min').text('You need to work on this!')
+            $('#class-5min').text('You need to work on this!').addClass('alert alert-danger')
         }
 
         //ftp ranking
@@ -106,7 +107,7 @@ $(document).ready(function () {
         } else if (pwrftp < 6.40 && pwrftp > 5.69) {
             $('#class-ftp').text('World Class - International Pro')
         } else {
-            $('#class-ftp').text('You need to work on this!')
+            $('#class-ftp').text('You need to work on this!').addClass('alert alert-danger')
         }
 
         if (pwrftp < 5.00 && pwrftp > 4.00) {
@@ -130,25 +131,25 @@ $(document).ready(function () {
 
     function femalePwrCalc() {
 
-        console.log($('#current-weight').val())
+        console.log($('#current-weight-kg').val())
 
         //5s pwr
-        var pwr5s = parseInt($('#pwr-5s-input').val()) / parseInt($('#current-weight').val())
+        var pwr5s = parseInt($('#pwr-5s-input').val()) / parseInt($('#current-weight-kg').val())
         console.log('5 sec power ' + pwr5s.toFixed(2))
         $('#pwr-5s-output').val(pwr5s.toFixed(2))
 
         //1min pwr
-        var pwr1min = parseInt($('#pwr-1min-input').val()) / parseInt($('#current-weight').val())
+        var pwr1min = parseInt($('#pwr-1min-input').val()) / parseInt($('#current-weight-kg').val())
         console.log('1 min power ' + pwr1min.toFixed(2))
         $('#pwr-1min-output').val(pwr1min.toFixed(2))
 
         //5min pwr
-        var pwr5min = parseInt($('#pwr-5min-input').val()) / parseInt($('#current-weight').val())
+        var pwr5min = parseInt($('#pwr-5min-input').val()) / parseInt($('#current-weight-kg').val())
         console.log('5 min power ' + pwr5min.toFixed(2))
         $('#pwr-5min-output').val(pwr5min.toFixed(2))
 
         //ftp pwr
-        var pwrftp = parseInt($('#pwr-ftp-input').val()) / parseInt($('#current-weight').val())
+        var pwrftp = parseInt($('#pwr-ftp-input').val()) / parseInt($('#current-weight-kg').val())
         console.log('FTP power ' + pwrftp.toFixed(2))
         $('#pwr-ftp-output').val(pwrftp.toFixed(2))
 
@@ -169,7 +170,8 @@ $(document).ready(function () {
         } else if (pwr5s < 19.42 && pwr5s > 17.70) {
             $('#class-5s').text('World Class - International Pro')
         } else {
-            $('#class-5s').text('You need to work on this!')
+            $('#class-5s').text('You need to work on this!').addClass('alert alert-danger')
+            
         }
 
         // 1m ranking 
@@ -190,7 +192,7 @@ $(document).ready(function () {
         } else if (pwr1min < 9.29 && pwr1min > 8.56) {
             $('#class-1min').text('World Class - International Pro')
         } else {
-            $('#class-1min').text('You need to work on this!')
+            $('#class-1min').text('You need to work on this!').addClass('alert alert-danger')
         }
 
         // 5min ranking
@@ -211,7 +213,7 @@ $(document).ready(function () {
         } else if (pwr5min < 6.61 && pwr5min > 5.87) {
             $('#class-5min').text('World Class - International Pro')
         } else {
-            $('#class-5min').text('You need to work on this!')
+            $('#class-5min').text('You need to work on this!').addClass('alert alert-danger')
         }
 
         //ftp ranking
@@ -232,7 +234,7 @@ $(document).ready(function () {
         } else if (pwrftp < 5.69 && pwrftp > 5.03) {
             $('#class-ftp').text('World Class - International Pro')
         } else {
-            $('#class-ftp').text('You need to work on this!')
+            $('#class-ftp').text('You need to work on this!').addClass('alert alert-danger')
         }
 
         if (pwrftp < 5.00 && pwrftp > 4.00) {
@@ -266,7 +268,6 @@ $(document).ready(function () {
     
     $('#reset').click(function(){
         $('.input-group').find("input[type=text]").val('')
-        $('.classification').text('')
         $('input:checkbox').prop('checked', false)
         $('.zwift-cat').text('?')
         $('.zwift-color').css('background-color', '#000')

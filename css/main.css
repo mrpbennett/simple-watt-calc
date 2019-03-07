@@ -20,6 +20,10 @@ body .input-group {
   width: 150px;
 }
 
+body .alert-danger {
+  padding: .1rem .5rem !important;
+}
+
 body .zwift-row h4 {
   margin: 0;
 }

@@ -10,8 +10,9 @@ The tool will also work out which Zwift Racing category you are too.
 
 ### ToDo:
 
-- [ ] Add stats for women.
+- [ x ] Add stats for women.
 - [ ] Move site over to a Jekyll Env
+- [ ] Add lbs into the calculations
 
 Any changes or suggestions please leave a issue request.
 
