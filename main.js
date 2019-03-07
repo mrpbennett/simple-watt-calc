@@ -1,16 +1,15 @@
 $(document).ready(function () {
 
-
     // maximal power out calc
     function malePwrCalc() {
 
         var weight = 0
 
-        if ( $('#lbs').is(':checked') ) {
+        if ($('#lbs').is(':checked')) {
             var lbs = $('#current-weight').val() / 2.2046
             weight = lbs.toFixed(2)
             console.log('weight in lbs is: ' + weight + ' kg')
-        } 
+        }
 
         if ($('#kg').is(':checked')) {
             weight = $('#current-weight').val()
@@ -142,36 +141,36 @@ $(document).ready(function () {
 
     function femalePwrCalc() {
 
-        var weight = 0
+        var weightFemale = 0
 
         if ($('#lbs').is(':checked')) {
             var lbs = $('#current-weight').val() / 2.2046
-            weight = lbs.toFixed(2)
-            console.log('weight in lbs is: ' + weight + ' kg')
+            weightFemale = lbs.toFixed(2)
+            console.log('weight in lbs is: ' + weightFemale + ' kg')
         }
 
         if ($('#kg').is(':checked')) {
-            weight = $('#current-weight').val()
-            console.log('weight in kgs is: ' + weight)
+            weightFemale = $('#current-weight').val()
+            console.log('weight in kgs is: ' + weightFemale)
         }
 
         //5s pwr
-        var pwr5s = parseInt($('#pwr-5s-input').val()) / parseInt(weight)
+        var pwr5s = parseInt($('#pwr-5s-input').val()) / parseInt(weightFemale)
         console.log('5 sec power ' + pwr5s.toFixed(2))
         $('#pwr-5s-output').val(pwr5s.toFixed(2))
 
         //1min pwr
-        var pwr1min = parseInt($('#pwr-1min-input').val()) / parseInt(weight)
+        var pwr1min = parseInt($('#pwr-1min-input').val()) / parseInt(weightFemale)
         console.log('1 min power ' + pwr1min.toFixed(2))
         $('#pwr-1min-output').val(pwr1min.toFixed(2))
 
         //5min pwr
-        var pwr5min = parseInt($('#pwr-5min-input').val()) / parseInt(weight)
+        var pwr5min = parseInt($('#pwr-5min-input').val()) / parseInt(weightFemale)
         console.log('5 min power ' + pwr5min.toFixed(2))
         $('#pwr-5min-output').val(pwr5min.toFixed(2))
 
         //ftp pwr
-        var pwrftp = parseInt($('#pwr-ftp-input').val()) / parseInt(weight)
+        var pwrftp = parseInt($('#pwr-ftp-input').val()) / parseInt(weightFemale)
         console.log('FTP power ' + pwrftp.toFixed(2))
         $('#pwr-ftp-output').val(pwrftp.toFixed(2))
 
