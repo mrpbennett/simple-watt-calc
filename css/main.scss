@@ -1,6 +1,37 @@
 body {
+
+    h1,h2,h3,h4,h5,h6 {
+        font-family: 'Montserrat', sans-serif;
+        text-transform: uppercase;
+        font-weight: 900;
+    }
+
+    .btn-success { 
+        background-color: #5BC252;
+        border-color: #5BC252;
+        border-radius: 0;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
     
     .input-group {
         width: 150px;
+    }
+
+    .zwift-row {
+
+        h4 {
+            margin: 0;
+        }
+        .zwift-color {
+            font-family: 'Montserrat', sans-serif;
+            text-transform: uppercase;
+            color: #fff;
+            height: 35px;
+            width: 35px;
+            border-radius: 50%;
+
+            background-color: #000;
+        }
     }
 }

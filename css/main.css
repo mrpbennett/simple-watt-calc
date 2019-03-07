@@ -1,4 +1,32 @@
+body h1, body h2, body h3, body h4, body h5, body h6 {
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+body .btn-success {
+  background-color: #5BC252;
+  border-color: #5BC252;
+  border-radius: 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
 body .input-group {
   width: 150px;
+}
+
+body .zwift-row h4 {
+  margin: 0;
+}
+
+body .zwift-row .zwift-color {
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  color: #fff;
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  background-color: #000;
 }
 /*# sourceMappingURL=main.css.map */

@@ -13,6 +13,7 @@
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,900" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
 
 </head>
@@ -25,9 +26,10 @@
 
             <p>To use this calculator you will need to know your 5s / 1min / 5min / power numbers and your current FTP. Best place to get these would be from your power curve. <a href="https://www.strava.com">Strava</a> has a great one for premium members or services such as <a href="https://www.trainingpeaks.com">Training Peaks</a> or <a href="https://www.wattsboard.com">Wattsboard</a> also has them. Wattboard is actually free too.</p>
 
-            <p>The figures in this calculator are based on <a href="http://www.peakscoachinggroup.com/DrAndrewCoggan">Andy Coggan's</a> power zones. You can see the full list <a href="https://github.com/mrpbennett/simple-watt-calc/blob/master/ftp-table.png?raw=true">here</a></p>
+            <p>The figures in this calculator are based on <a href="http://www.peakscoachinggroup.com/DrAndrewCoggan">Andy Coggan's</a> power zones. You can see the full list <a href="https://github.com/mrpbennett/simple-watt-calc/blob/master/ftp-table.png?raw=true" target="_blank">here</a></p>
 
-            <h4>maximal power output</h4> 
+
+            <h4 class="mb-4">maximal power output</h4> 
 
             <div class="power-block d-flex flex-column">
 
@@ -145,51 +147,36 @@
                     </div>
                 </div>
 
+                <!-- Zwift -->
+                <div class="row zwift-row my-4">
+                    <div class="col d-flex align-items-center">
+                        <h4 class="mr-5">Zwift Racing:</h4>
+                        <div class="zwift-color d-flex justify-content-center align-items-center">
+                            <span id="zwift-cat">?</span>
+                        </div>
+                    </div>
+                </div>
+
 
             </div>
 
             <button type="button" class="btn btn-success mr-3" id="calc-wkg">calc w/kg</button>
-            <button type="button" class="btn btn-danger" id="reset">reset</button>
+            <!-- <button type="button" class="btn btn-danger" id="reset">reset</button> -->
 
             <hr>
 
             <div>
-                <h4>
-                    World Class
-                    <small class="text-muted">eg: International Pro</small>
-                </h4>
-                <h4>
-                    Exceptional
-                    <small class="text-muted">eg: Domestic Pro</small>
-                </h4>
-                <h4>
-                    Excellent
-                    <small class="text-muted">eg: Cat 1</small>
-                </h4>
-                <h4>
-                    Very Good
-                    <small class="text-muted">eg: Cat 2</small>
-                </h4>
-                <h4>
-                    Good
-                    <small class="text-muted">eg: Cat 3</small>
-                </h4>
-                <h4>
-                    Moderate
-                    <small class="text-muted">eg: Cat 4</small>
-                </h4>
-                <h4>
-                    Fair
-                    <small class="text-muted">eg: Cat 5</small>
-                </h4>
-                <h4>
-                    Untrained
-                    <small class="text-muted">eg: Non Racer</small>
-                </h4>
-                <h4>
-                    You need to work on this!
-                    <small class="text-muted">eg: Couch Potato</small>
-                </h4>
+                <h3>why does w/kg matter?</h3>
+                <p>W/kg matters as an indicator of performance and speed. On a smooth, flat road, cyclists with a greater power number will almost always go faster. But go to the hills or even on undulating roads and w/kg really starts to matter. If we have two cyclists both producing 250 watts, on a flat road, they’ll be about even. But when the road turns to hills, the lighter of the two cyclists will be faster.</p>
+
+
+                <h3>want to improve your w/kg?</h3>
+                <p>There are basically just three ways in which you can affect change to W/kg.</p>
+                <ol>
+                    <li>Increase your power while keeping your weight constant</li>
+                    <li>Keep your power constant and decrease your weight.</li>
+                    <li>Increase your power while also decreasing your weight.</li>
+                </ol>
             </div>
 
 
