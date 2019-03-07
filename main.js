@@ -1,10 +1,10 @@
 $(document).ready(function () {
 
     // maximal power out calc
-    function pwrCalc() {
+    function malePwrCalc() {
 
         console.log($('#current-weight').val())
-        
+
         //5s pwr
         var pwr5s = parseInt($('#pwr-5s-input').val()) / parseInt($('#current-weight').val())
         console.log('5 sec power ' + pwr5s.toFixed(2))
@@ -25,11 +25,10 @@ $(document).ready(function () {
         console.log('FTP power ' + pwrftp.toFixed(2))
         $('#pwr-ftp-output').val(pwrftp.toFixed(2))
 
-
         // 5s ranking 
-        if (pwr5s < 12.35 && pwr5s > 10.17 ) {
+        if (pwr5s < 12.35 && pwr5s > 10.17) {
             $('#class-5s').text('Untrained - Non Racer')
-        } else if(pwr5s < 13.98 && pwr5s > 11.80) {
+        } else if (pwr5s < 13.98 && pwr5s > 11.80) {
             $('#class-5s').text('Fair - Cat 5')
         } else if (pwr5s < 15.61 && pwr5s > 13.71) {
             $('#class-5s').text('Moderate - Cat 4')
@@ -44,7 +43,7 @@ $(document).ready(function () {
         } else if (pwr5s < 24.04 && pwr5s > 21.86) {
             $('#class-5s').text('World Class - International Pro')
         } else {
-            $('#class-1min').text('You need to work on this!')
+            $('#class-5s').text('You need to work on this!')
         }
 
         // 1m ranking 
@@ -86,7 +85,7 @@ $(document).ready(function () {
         } else if (pwr5min < 7.60 && pwr5min > 6.77) {
             $('#class-5min').text('World Class - International Pro')
         } else {
-            $('#class-1min').text('You need to work on this!')
+            $('#class-5min').text('You need to work on this!')
         }
 
         //ftp ranking
@@ -107,10 +106,9 @@ $(document).ready(function () {
         } else if (pwrftp < 6.40 && pwrftp > 5.69) {
             $('#class-ftp').text('World Class - International Pro')
         } else {
-            $('#class-1min').text('You need to work on this!')
+            $('#class-ftp').text('You need to work on this!')
         }
 
-        // zwift racing
         if (pwrftp < 5.00 && pwrftp > 4.00) {
             $('.zwift-cat').text('A')
             $('.zwift-color').css('background-color', '#FA472C')
@@ -128,16 +126,148 @@ $(document).ready(function () {
             $('.zwift-color').css('background-color', '#FCD030')
             console.log('Zwift Cat D')
         }
-        
-
     }
 
-    $('#calc-wkg').click(function(){
-        pwrCalc()
-    })
+    function femalePwrCalc() {
 
+        console.log($('#current-weight').val())
+
+        //5s pwr
+        var pwr5s = parseInt($('#pwr-5s-input').val()) / parseInt($('#current-weight').val())
+        console.log('5 sec power ' + pwr5s.toFixed(2))
+        $('#pwr-5s-output').val(pwr5s.toFixed(2))
+
+        //1min pwr
+        var pwr1min = parseInt($('#pwr-1min-input').val()) / parseInt($('#current-weight').val())
+        console.log('1 min power ' + pwr1min.toFixed(2))
+        $('#pwr-1min-output').val(pwr1min.toFixed(2))
+
+        //5min pwr
+        var pwr5min = parseInt($('#pwr-5min-input').val()) / parseInt($('#current-weight').val())
+        console.log('5 min power ' + pwr5min.toFixed(2))
+        $('#pwr-5min-output').val(pwr5min.toFixed(2))
+
+        //ftp pwr
+        var pwrftp = parseInt($('#pwr-ftp-input').val()) / parseInt($('#current-weight').val())
+        console.log('FTP power ' + pwrftp.toFixed(2))
+        $('#pwr-ftp-output').val(pwrftp.toFixed(2))
+
+        if (pwr5s < 10.15 && pwr5s > 8.43) {
+            $('#class-5s').text('Untrained - Non Racer')
+        } else if (pwr5s < 11.45 && pwr5s > 9.72) {
+            $('#class-5s').text('Fair - Cat 5')
+        } else if (pwr5s < 12.74 && pwr5s > 11.01) {
+            $('#class-5s').text('Moderate - Cat 4')
+        } else if (pwr5s < 14.03 && pwr5s > 12.31) {
+            $('#class-5s').text('Good - Cat 3')
+        } else if (pwr5s < 15.54 && pwr5s > 13.82) {
+            $('#class-5s').text('Very Good - Cat 2')
+        } else if (pwr5s < 16.83 && pwr5s > 15.11) {
+            $('#class-5s').text('Excellent - Cat 1')
+        } else if (pwr5s < 18.13 && pwr5s > 16.40) {
+            $('#class-5s').text('Exceptional - Domestic Pro')
+        } else if (pwr5s < 19.42 && pwr5s > 17.70) {
+            $('#class-5s').text('World Class - International Pro')
+        } else {
+            $('#class-5s').text('You need to work on this!')
+        }
+
+        // 1m ranking 
+        if (pwr1min < 5.39 && pwr1min > 4.67) {
+            $('#class-1min').text('Untrained - Non Racer')
+        } else if (pwr1min < 5.94 && pwr1min > 5.21) {
+            $('#class-1min').text('Fair - Cat 5')
+        } else if (pwr1min < 6.48 && pwr1min > 5.76) {
+            $('#class-1min').text('Moderate - Cat 4')
+        } else if (pwr1min < 7.02 && pwr1min > 6.30) {
+            $('#class-1min').text('Good - Cat 3')
+        } else if (pwr1min < 7.66 && pwr1min > 6.93) {
+            $('#class-1min').text('Very Good - Cat 2')
+        } else if (pwr1min < 8.20 && pwr1min > 7.48) {
+            $('#class-1min').text('Excellent - Cat 1')
+        } else if (pwr1min < 8.75 && pwr1min > 8.02) {
+            $('#class-1min').text('Exceptional - Domestic Pro')
+        } else if (pwr1min < 9.29 && pwr1min > 8.56) {
+            $('#class-1min').text('World Class - International Pro')
+        } else {
+            $('#class-1min').text('You need to work on this!')
+        }
+
+        // 5min ranking
+        if (pwr5min < 2.63 && pwr5min > 1.89) {
+            $('#class-5min').text('Untrained - Non Racer')
+        } else if (pwr5min < 3.19 && pwr5min > 2.45) {
+            $('#class-5min').text('Fair - Cat 5')
+        } else if (pwr5min < 3.74 && pwr5min > 3.00) {
+            $('#class-5min').text('Moderate - Cat 4')
+        } else if (pwr5min < 4.30 && pwr5min > 3.56) {
+            $('#class-5min').text('Good - Cat 3')
+        } else if (pwr5min < 4.94 && pwr5min > 4.20) {
+            $('#class-5min').text('Very Good - Cat 2')
+        } else if (pwr5min < 5.50 && pwr5min > 4.76) {
+            $('#class-5min').text('Excellent - Cat 1')
+        } else if (pwr5min < 6.05 && pwr5min > 5.31) {
+            $('#class-5min').text('Exceptional - Domestic Pro')
+        } else if (pwr5min < 6.61 && pwr5min > 5.87) {
+            $('#class-5min').text('World Class - International Pro')
+        } else {
+            $('#class-5min').text('You need to work on this!')
+        }
+
+        //ftp ranking
+        if (pwrftp < 2.16 && pwrftp > 1.50) {
+            $('#class-ftp').text('Untrained - Non Racer')
+        } else if (pwrftp < 2.65 && pwrftp > 1.99) {
+            $('#class-ftp').text('Fair - Cat 5')
+        } else if (pwrftp < 3.74 && pwrftp > 2.49) {
+            $('#class-ftp').text('Moderate - Cat 4')
+        } else if (pwrftp < 3.64 && pwrftp > 2.98) {
+            $('#class-ftp').text('Good - Cat 3')
+        } else if (pwrftp < 4.21 && pwrftp > 3.55) {
+            $('#class-ftp').text('Very Good - Cat 2')
+        } else if (pwrftp < 4.70 && pwrftp > 4.05) {
+            $('#class-ftp').text('Excellent - Cat 1')
+        } else if (pwrftp < 5.20 && pwrftp > 4.54) {
+            $('#class-ftp').text('Exceptional - Domestic Pro')
+        } else if (pwrftp < 5.69 && pwrftp > 5.03) {
+            $('#class-ftp').text('World Class - International Pro')
+        } else {
+            $('#class-ftp').text('You need to work on this!')
+        }
+
+        if (pwrftp < 5.00 && pwrftp > 4.00) {
+            $('.zwift-cat').text('A')
+            $('.zwift-color').css('background-color', '#FA472C')
+            console.log('Zwift Cat A')
+        } else if (pwrftp < 4.00 && pwrftp > 3.20) {
+            $('.zwift-cat').text('B')
+            $('.zwift-color').css('background-color', '#5BC252')
+            console.log('Zwift Cat B')
+        } else if (pwrftp < 3.10 && pwrftp > 2.50) {
+            $('.zwift-cat').text('C')
+            $('.zwift-color').css('background-color', '#44BFE8')
+            console.log('Zwift Cat C')
+        } else if (pwrftp < 2.40 && pwrftp > 1.00) {
+            $('.zwift-cat').text('D')
+            $('.zwift-color').css('background-color', '#FCD030')
+            console.log('Zwift Cat D')
+        }
+    }
+
+    $('#calc-wkg').click(function () {
+
+        if ( $('#maleCheck').is(':checked') ) {
+            malePwrCalc()
+        } else if ( $('#femaleCheck').is(':checked') ) {
+            femalePwrCalc()
+        }
+
+    })
+    
     $('#reset').click(function(){
-        $('.input-group').find("input[type=text]").val("")
+        $('.input-group').find("input[type=text]").val('')
+        $('.classification').text('')
+        $('input:checkbox').prop('checked', false)
         $('.zwift-cat').text('?')
         $('.zwift-color').css('background-color', '#000')
     })
