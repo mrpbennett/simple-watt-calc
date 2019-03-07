@@ -4,17 +4,13 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
   font-weight: 800;
 }
 
-body .btn-success {
-  background-color: #5BC252;
-  border-color: #5BC252;
+body .btn-primary {
   border-radius: 0;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
 
-body .btn-danger {
-  background-color: #FA472C;
-  border-color: #FA472C;
+body .btn-dark {
   border-radius: 0;
   text-transform: uppercase;
   letter-spacing: 2px;
