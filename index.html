@@ -1,0 +1,214 @@
+<html lang="en" class="h-100 gr__getbootstrap_com">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v3.8.5">
+    <title>Sticky Footer Template · Bootstrap</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/sticky-footer/">
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
+
+</head>
+
+<body class="d-flex flex-column h-100" data-gr-c-s-loaded="true">
+    <!-- Begin page content -->
+    <main role="main" class="flex-shrink-0">
+        <div class="container">
+            <h1 class="mt-5">Simple Watt/Kg Calc</h1>
+
+            <p>To use this calculator you will need to know your 5s / 1min / 5min / power numbers and your current FTP. Best place to get these would be from your power curve. <a href="https://www.strava.com">Strava</a> has a great one for premium members or services such as <a href="https://www.trainingpeaks.com">Training Peaks</a> or <a href="https://www.wattsboard.com">Wattsboard</a> also has them. Wattboard is actually free too.</p>
+
+            <p>The figures in this calculator are based on <a href="http://www.peakscoachinggroup.com/DrAndrewCoggan">Andy Coggan's</a> power zones. You can see the full list <a href="http://">here</a></p>
+
+            <h4>maximal power output</h4> 
+
+            <div class="power-block d-flex flex-column">
+
+                <div class="row">
+                    <div class="col d-flex align-items-center">
+                        <p class="mr-5">What is your current weight in Kg?</p>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">Kg</span>
+                            </div>
+                            <input type="text" class="form-control" id="current-weight">
+                        </div>
+                    </div>
+                </div>
+
+                <hr>
+
+                <!-- 5s power -->
+                <div class="row">
+                    <div class="col-md-2">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">5 sec</span>
+                            </div>
+                            <input type="text" class="form-control" id="pwr-5s-input">
+                        </div>
+                    </div>
+
+                    <div class="col-md-2">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">W/kg</span>
+                            </div>
+                            <input type="text" class="form-control" id="pwr-5s-output">
+                        </div>
+                    </div>
+
+                    <div class="col-md-8 d-flex align-items-center">
+                        <p class="text-center" id="class-5s"></p>
+                    </div>
+                </div>
+
+                <!-- 1min power -->
+                <div class="row">
+                    <div class="col-md-2">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">1 min</span>
+                            </div>
+                            <input type="text" class="form-control" id="pwr-1min-input">
+                        </div>
+                    </div>
+                
+                    <div class="col-md-2">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">W/kg</span>
+                            </div>
+                            <input type="text" class="form-control" id="pwr-1min-output">
+                        </div>
+                    </div>
+                
+                    <div class="col-md-8 d-flex align-items-center">
+                        <p class="text-center" id="class-1min"></p>
+                    </div>
+                </div>
+
+                <!-- 5min power -->
+                <div class="row">
+                    <div class="col-md-2">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">5 min</span>
+                            </div>
+                            <input type="text" class="form-control" id="pwr-5min-input">
+                        </div>
+                    </div>
+                
+                    <div class="col-md-2">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">W/kg</span>
+                            </div>
+                            <input type="text" class="form-control" id="pwr-5min-output">
+                        </div>
+                    </div>
+                
+                    <div class="col-md-8 d-flex align-items-center">
+                        <p class="text-center" id="class-5min"></p>
+                    </div>
+                </div>
+
+                <!-- FTP power -->
+                <div class="row">
+                    <div class="col-md-2">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">FTP</span>
+                            </div>
+                            <input type="text" class="form-control" id="pwr-ftp-input">
+                        </div>
+                    </div>
+                
+                    <div class="col-md-2">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">W/kg</span>
+                            </div>
+                            <input type="text" class="form-control" id="pwr-ftp-output">
+                        </div>
+                    </div>
+                
+                    <div class="col-md-8 d-flex align-items-center">
+                        <p class="text-center" id="class-ftp"></p>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <button type="button" class="btn btn-success mr-3" id="calc-wkg">calc w/kg</button>
+            <button type="button" class="btn btn-danger" id="reset">reset</button>
+
+            <hr>
+
+            <div>
+                <h4>
+                    World Class
+                    <small class="text-muted">eg: International Pro</small>
+                </h4>
+                <h4>
+                    Exceptional
+                    <small class="text-muted">eg: Domestic Pro</small>
+                </h4>
+                <h4>
+                    Excellent
+                    <small class="text-muted">eg: Cat 1</small>
+                </h4>
+                <h4>
+                    Very Good
+                    <small class="text-muted">eg: Cat 2</small>
+                </h4>
+                <h4>
+                    Good
+                    <small class="text-muted">eg: Cat 3</small>
+                </h4>
+                <h4>
+                    Moderate
+                    <small class="text-muted">eg: Cat 4</small>
+                </h4>
+                <h4>
+                    Fair
+                    <small class="text-muted">eg: Cat 5</small>
+                </h4>
+                <h4>
+                    Untrained
+                    <small class="text-muted">eg: Non Racer</small>
+                </h4>
+                <h4>
+                    You need to work on this!
+                    <small class="text-muted">eg: Couch Potato</small>
+                </h4>
+            </div>
+
+
+        </div>
+    </main>
+
+    <footer class="footer mt-auto py-3">
+        <div class="container">
+            <span class="text-muted">Created by <a href="http://">mrpbennett</a></span>
+        </div>
+    </footer>
+
+
+    <!-- scripts -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+
+</body>
+
+</html>
