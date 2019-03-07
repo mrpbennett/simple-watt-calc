@@ -1,4 +1,4 @@
-body h1, body h2, body h3, body h4, body h5, body h6 {
+body h1, body h2, body h3, body h4, body h5, body h6, body strong {
   font-family: 'Montserrat', sans-serif;
   text-transform: uppercase;
   font-weight: 800;
@@ -41,5 +41,35 @@ body .zwift-row .zwift-color {
 body .learn-more {
   list-style: none;
   padding: 0;
+}
+
+body .zwift-list {
+  list-style: none;
+  padding: 0;
+}
+
+body .zwift-list .za, body .zwift-list .zb, body .zwift-list .zc, body .zwift-list .zd {
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  color: #fff;
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+}
+
+body .zwift-list .za {
+  background-color: #FA472C;
+}
+
+body .zwift-list .zb {
+  background-color: #5BC252;
+}
+
+body .zwift-list .zc {
+  background-color: #44BFE8;
+}
+
+body .zwift-list .zd {
+  background-color: #FCD030;
 }
 /*# sourceMappingURL=main.css.map */

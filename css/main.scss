@@ -1,6 +1,6 @@
 body {
 
-    h1,h2,h3,h4,h5,h6 {
+    h1,h2,h3,h4,h5,h6, strong {
         font-family: 'Montserrat', sans-serif;
         text-transform: uppercase;
         font-weight: 800;
@@ -47,4 +47,34 @@ body {
         list-style: none;
         padding:0;
     }
+
+    .zwift-list {
+
+        list-style: none;
+        padding: 0;
+
+        .za, .zb, .zc, .zd {
+            font-family: 'Montserrat', sans-serif;
+            text-transform: uppercase;
+            color: #fff;
+            height: 35px;
+            width: 35px;
+            border-radius: 50%;
+        }
+        .za {
+            background-color: #FA472C;
+        }
+        .zb {
+            background-color: #5BC252;
+        }
+        .zc {
+            background-color: #44BFE8;
+        }
+        .zd {
+            background-color: #FCD030;
+        }
+
+    }
+
+    
 }
