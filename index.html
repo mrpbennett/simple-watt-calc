@@ -27,10 +27,6 @@
 
             <p>The figures in this calculator are based on <a href="http://www.peakscoachinggroup.com/DrAndrewCoggan">Andy Coggan's</a> power zones. You can see the full list <a href="https://github.com/mrpbennett/simple-watt-calc/blob/master/ftp-table.png?raw=true" target="_blank">here</a></p>
 
-            <p class="alert alert-success">If your weight is in lbs, for an approximate result, divide the mass value by 2.205
-            </p>
-
-
             <h4 class="mb-4">maximal power output</h4> 
 
             <div class="power-block d-flex flex-column">
@@ -38,18 +34,23 @@
                 <div class="row">
                     <div class="col d-flex align-items-center">
                         <p class="mr-5">What is your current weight?</p>
-                        <div class="input-group mb-3 mr-3">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text">Kg</span>
-                            </div>
-                            <input type="text" class="form-control" id="current-weight-kg">
+                        <div class="mb-3" >
+                            <input type="text" class="form-control" id="current-weight" style="width: 50%;">
                         </div>
-                        <!-- <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text">Lbs</span>
+                        <div class="d-flex align-items-center">
+                            <div class="form-check mr-3">
+                                <input class="form-check-input" type="checkbox" value="" id="kg">
+                                <label class="form-check-label" for="kg">
+                                    Kg
+                                </label>
                             </div>
-                            <input type="text" class="form-control" id="current-weight-lbs">
-                        </div> -->
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="lbs">
+                                <label class="form-check-label" for="lbs">
+                                    Lbs
+                                </label>
+                            </div>
+                        </div>
                         
                     </div>
                 </div>

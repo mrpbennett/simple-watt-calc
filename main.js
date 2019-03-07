@@ -4,25 +4,36 @@ $(document).ready(function () {
     // maximal power out calc
     function malePwrCalc() {
 
-        console.log($('#current-weight-kg').val())
+        var weight = 0
+
+        if ( $('#lbs').is(':checked') ) {
+            var lbs = $('#current-weight').val() / 2.2046
+            weight = lbs.toFixed(2)
+            console.log('weight in lbs is: ' + weight + ' kg')
+        } 
+
+        if ($('#kg').is(':checked')) {
+            weight = $('#current-weight').val()
+            console.log('weight in kgs is: ' + weight)
+        }
 
         //5s pwr
-        var pwr5s = parseInt($('#pwr-5s-input').val()) / parseInt($('#current-weight-kg').val())
+        var pwr5s = parseInt($('#pwr-5s-input').val()) / parseInt(weight)
         console.log('5 sec power ' + pwr5s.toFixed(2))
         $('#pwr-5s-output').val(pwr5s.toFixed(2))
 
         //1min pwr
-        var pwr1min = parseInt($('#pwr-1min-input').val()) / parseInt($('#current-weight-kg').val())
+        var pwr1min = parseInt($('#pwr-1min-input').val()) / parseInt(weight)
         console.log('1 min power ' + pwr1min.toFixed(2))
         $('#pwr-1min-output').val(pwr1min.toFixed(2))
 
         //5min pwr
-        var pwr5min = parseInt($('#pwr-5min-input').val()) / parseInt($('#current-weight-kg').val())
+        var pwr5min = parseInt($('#pwr-5min-input').val()) / parseInt(weight)
         console.log('5 min power ' + pwr5min.toFixed(2))
         $('#pwr-5min-output').val(pwr5min.toFixed(2))
 
         //ftp pwr
-        var pwrftp = parseInt($('#pwr-ftp-input').val()) / parseInt($('#current-weight-kg').val())
+        var pwrftp = parseInt($('#pwr-ftp-input').val()) / parseInt(weight)
         console.log('FTP power ' + pwrftp.toFixed(2))
         $('#pwr-ftp-output').val(pwrftp.toFixed(2))
 
@@ -44,7 +55,7 @@ $(document).ready(function () {
         } else if (pwr5s < 24.04 && pwr5s > 21.86) {
             $('#class-5s').text('World Class - International Pro')
         } else {
-            $('#class-5s').text('You need to work on this!').addClass('alert alert-danger')
+            $('#class-5s').text('The real winner is whoever had the most fun!').addClass('alert alert-danger')
         }
 
         // 1m ranking 
@@ -65,7 +76,7 @@ $(document).ready(function () {
         } else if (pwr1min < 11.50 && pwr1min > 10.58) {
             $('#class-1min').text('World Class - International Pro')
         } else {
-            $('#class-1min').text('You need to work on this!').addClass('alert alert-danger')
+            $('#class-1min').text('The real winner is whoever had the most fun!').addClass('alert alert-danger')
         }
 
         // 5min ranking
@@ -86,7 +97,7 @@ $(document).ready(function () {
         } else if (pwr5min < 7.60 && pwr5min > 6.77) {
             $('#class-5min').text('World Class - International Pro')
         } else {
-            $('#class-5min').text('You need to work on this!').addClass('alert alert-danger')
+            $('#class-5min').text('The real winner is whoever had the most fun!').addClass('alert alert-danger')
         }
 
         //ftp ranking
@@ -107,22 +118,22 @@ $(document).ready(function () {
         } else if (pwrftp < 6.40 && pwrftp > 5.69) {
             $('#class-ftp').text('World Class - International Pro')
         } else {
-            $('#class-ftp').text('You need to work on this!').addClass('alert alert-danger')
+            $('#class-ftp').text('The real winner is whoever had the most fun!').addClass('alert alert-danger')
         }
 
-        if (pwrftp < 5.00 && pwrftp > 4.00) {
+        if (pwrftp < 5.00 && pwrftp > 4.01) {
             $('.zwift-cat').text('A')
             $('.zwift-color').css('background-color', '#FA472C')
             console.log('Zwift Cat A')
-        } else if (pwrftp < 4.00 && pwrftp > 3.20) {
+        } else if (pwrftp < 4.00 && pwrftp > 3.11) {
             $('.zwift-cat').text('B')
             $('.zwift-color').css('background-color', '#5BC252')
             console.log('Zwift Cat B')
-        } else if (pwrftp < 3.10 && pwrftp > 2.50) {
+        } else if (pwrftp < 3.10 && pwrftp > 2.51) {
             $('.zwift-cat').text('C')
             $('.zwift-color').css('background-color', '#44BFE8')
             console.log('Zwift Cat C')
-        } else if (pwrftp < 2.40 && pwrftp > 1.00) {
+        } else if (pwrftp < 2.50 && pwrftp > 1.00) {
             $('.zwift-cat').text('D')
             $('.zwift-color').css('background-color', '#FCD030')
             console.log('Zwift Cat D')
@@ -131,25 +142,36 @@ $(document).ready(function () {
 
     function femalePwrCalc() {
 
-        console.log($('#current-weight-kg').val())
+        var weight = 0
+
+        if ($('#lbs').is(':checked')) {
+            var lbs = $('#current-weight').val() / 2.2046
+            weight = lbs.toFixed(2)
+            console.log('weight in lbs is: ' + weight + ' kg')
+        }
+
+        if ($('#kg').is(':checked')) {
+            weight = $('#current-weight').val()
+            console.log('weight in kgs is: ' + weight)
+        }
 
         //5s pwr
-        var pwr5s = parseInt($('#pwr-5s-input').val()) / parseInt($('#current-weight-kg').val())
+        var pwr5s = parseInt($('#pwr-5s-input').val()) / parseInt(weight)
         console.log('5 sec power ' + pwr5s.toFixed(2))
         $('#pwr-5s-output').val(pwr5s.toFixed(2))
 
         //1min pwr
-        var pwr1min = parseInt($('#pwr-1min-input').val()) / parseInt($('#current-weight-kg').val())
+        var pwr1min = parseInt($('#pwr-1min-input').val()) / parseInt(weight)
         console.log('1 min power ' + pwr1min.toFixed(2))
         $('#pwr-1min-output').val(pwr1min.toFixed(2))
 
         //5min pwr
-        var pwr5min = parseInt($('#pwr-5min-input').val()) / parseInt($('#current-weight-kg').val())
+        var pwr5min = parseInt($('#pwr-5min-input').val()) / parseInt(weight)
         console.log('5 min power ' + pwr5min.toFixed(2))
         $('#pwr-5min-output').val(pwr5min.toFixed(2))
 
         //ftp pwr
-        var pwrftp = parseInt($('#pwr-ftp-input').val()) / parseInt($('#current-weight-kg').val())
+        var pwrftp = parseInt($('#pwr-ftp-input').val()) / parseInt(weight)
         console.log('FTP power ' + pwrftp.toFixed(2))
         $('#pwr-ftp-output').val(pwrftp.toFixed(2))
 
@@ -170,7 +192,7 @@ $(document).ready(function () {
         } else if (pwr5s < 19.42 && pwr5s > 17.70) {
             $('#class-5s').text('World Class - International Pro')
         } else {
-            $('#class-5s').text('You need to work on this!').addClass('alert alert-danger')
+            $('#class-5s').text('The real winner is whoever had the most fun!').addClass('alert alert-danger')
             
         }
 
@@ -192,7 +214,7 @@ $(document).ready(function () {
         } else if (pwr1min < 9.29 && pwr1min > 8.56) {
             $('#class-1min').text('World Class - International Pro')
         } else {
-            $('#class-1min').text('You need to work on this!').addClass('alert alert-danger')
+            $('#class-1min').text('The real winner is whoever had the most fun!').addClass('alert alert-danger')
         }
 
         // 5min ranking
@@ -213,7 +235,7 @@ $(document).ready(function () {
         } else if (pwr5min < 6.61 && pwr5min > 5.87) {
             $('#class-5min').text('World Class - International Pro')
         } else {
-            $('#class-5min').text('You need to work on this!').addClass('alert alert-danger')
+            $('#class-5min').text('The real winner is whoever had the most fun!').addClass('alert alert-danger')
         }
 
         //ftp ranking
@@ -234,22 +256,22 @@ $(document).ready(function () {
         } else if (pwrftp < 5.69 && pwrftp > 5.03) {
             $('#class-ftp').text('World Class - International Pro')
         } else {
-            $('#class-ftp').text('You need to work on this!').addClass('alert alert-danger')
+            $('#class-ftp').text('The real winner is whoever had the most fun!').addClass('alert alert-danger')
         }
 
-        if (pwrftp < 5.00 && pwrftp > 4.00) {
+        if (pwrftp < 5.00 && pwrftp > 4.01) {
             $('.zwift-cat').text('A')
             $('.zwift-color').css('background-color', '#FA472C')
             console.log('Zwift Cat A')
-        } else if (pwrftp < 4.00 && pwrftp > 3.20) {
+        } else if (pwrftp < 4.00 && pwrftp > 3.11) {
             $('.zwift-cat').text('B')
             $('.zwift-color').css('background-color', '#5BC252')
             console.log('Zwift Cat B')
-        } else if (pwrftp < 3.10 && pwrftp > 2.50) {
+        } else if (pwrftp < 3.10 && pwrftp > 2.51) {
             $('.zwift-cat').text('C')
             $('.zwift-color').css('background-color', '#44BFE8')
             console.log('Zwift Cat C')
-        } else if (pwrftp < 2.40 && pwrftp > 1.00) {
+        } else if (pwrftp < 2.50 && pwrftp > 1.00) {
             $('.zwift-cat').text('D')
             $('.zwift-color').css('background-color', '#FCD030')
             console.log('Zwift Cat D')
@@ -269,6 +291,7 @@ $(document).ready(function () {
     $('#reset').click(function(){
         $('.input-group').find("input[type=text]").val('')
         $('input:checkbox').prop('checked', false)
+        $('#current-weight').val('')
         $('.zwift-cat').text('?')
         $('.zwift-color').css('background-color', '#000')
     })
