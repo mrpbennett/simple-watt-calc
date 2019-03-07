@@ -112,20 +112,20 @@ $(document).ready(function () {
 
         // zwift racing
         if (pwrftp < 5.00 && pwrftp > 4.00) {
-            $('.zwift-cat').html('A')
-            $('.zwift-color').css('background-color: #FA472C;')
+            $('.zwift-cat').text('A')
+            $('.zwift-color').css('background-color', '#FA472C')
             console.log('Zwift Cat A')
         } else if (pwrftp < 4.00 && pwrftp > 3.20) {
-            $('.zwift-cat').html('B')
-            $('.zwift-color').css('background-color: #5BC252;')
+            $('.zwift-cat').text('B')
+            $('.zwift-color').css('background-color', '#5BC252')
             console.log('Zwift Cat B')
         } else if (pwrftp < 3.10 && pwrftp > 2.50) {
-            $('.zwift-cat').html('C')
-            $('.zwift-color').css('background-color: #44BFE8;')
+            $('.zwift-cat').text('C')
+            $('.zwift-color').css('background-color', '#44BFE8')
             console.log('Zwift Cat C')
         } else if (pwrftp < 2.40 && pwrftp > 1.00) {
-            $('.zwift-cat').html('D')
-            $('.zwift-color').css('background-color: #FCD030;')
+            $('.zwift-cat').text('D')
+            $('.zwift-color').css('background-color', '#FCD030')
             console.log('Zwift Cat D')
         }
         
@@ -137,6 +137,8 @@ $(document).ready(function () {
     })
 
     $('#reset').click(function(){
-        $(this).find("input[type=text]").val("");
+        $(this).find("input[type=text]").val("")
+        $('.zwift-cat').html('?')
+        $('.zwift-color').css('background-color: #000;')
     })
 })

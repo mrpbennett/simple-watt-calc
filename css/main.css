@@ -12,6 +12,14 @@ body .btn-success {
   letter-spacing: 2px;
 }
 
+body .btn-danger {
+  background-color: #FA472C;
+  border-color: #FA472C;
+  border-radius: 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
 body .input-group {
   width: 150px;
 }
