@@ -37,4 +37,9 @@ body .zwift-row .zwift-color {
   border-radius: 50%;
   background-color: #000;
 }
+
+body .learn-more {
+  list-style: none;
+  padding: 0;
+}
 /*# sourceMappingURL=main.css.map */
