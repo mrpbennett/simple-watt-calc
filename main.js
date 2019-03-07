@@ -36,7 +36,7 @@ $(document).ready(function () {
         } else if (pwr5s < 17.24 && pwr5s > 15.07) {
             $('#class-5s').text('Good - Cat 3')
         } else if (pwr5s < 19.15 && pwr5s > 16.97) {
-            $('#class-5s').text('Very Good - Cat 3 - Cat 2')
+            $('#class-5s').text('Very Good - Cat 2')
         } else if (pwr5s < 20.78 && pwr5s > 18.60) {
             $('#class-5s').text('Excellent - Cat 1')
         } else if (pwr5s < 22.41 && pwr5s > 20.23) {
@@ -57,7 +57,7 @@ $(document).ready(function () {
         } else if (pwr1min < 8.63 && pwr1min > 7.71) {
             $('#class-1min').text('Good - Cat 3')
         } else if (pwr1min < 9.43 && pwr1min > 8.51) {
-            $('#class-1min').text('Very Good - Cat 3 - Cat 2')
+            $('#class-1min').text('Very Good - Cat 2')
         } else if (pwr1min < 10.12 && pwr1min > 9.20) {
             $('#class-1min').text('Excellent - Cat 1')
         } else if (pwr1min < 10.81 && pwr1min > 9.81) {
@@ -78,7 +78,7 @@ $(document).ready(function () {
         } else if (pwr5min < 5.01 && pwr5min > 4.19) {
             $('#class-5min').text('Good - Cat 3')
         } else if (pwr5min < 5.74 && pwr5min > 4.91) {
-            $('#class-5min').text('Very Good - Cat 3 - Cat 2')
+            $('#class-5min').text('Very Good - Cat 2')
         } else if (pwr5min < 6.36 && pwr5min > 5.53) {
             $('#class-5min').text('Excellent - Cat 1')
         } else if (pwr5min < 6.98 && pwr5min > 6.15) {
@@ -99,7 +99,7 @@ $(document).ready(function () {
         } else if (pwrftp < 4.18 && pwrftp > 3.47) {
             $('#class-ftp').text('Good - Cat 3')
         } else if (pwrftp < 4.80 && pwrftp > 4.09) {
-            $('#class-ftp').text('Very Good - Cat 3 - Cat 2')
+            $('#class-ftp').text('Very Good - Cat 2')
         } else if (pwrftp < 5.33 && pwrftp > 4.62) {
             $('#class-ftp').text('Excellent - Cat 1')
         } else if (pwrftp < 5.87 && pwrftp > 5.15) {
