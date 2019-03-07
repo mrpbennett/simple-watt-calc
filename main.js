@@ -137,8 +137,8 @@ $(document).ready(function () {
     })
 
     $('#reset').click(function(){
-        $(this).find("input[type=text]").val("")
-        $('.zwift-cat').html('?')
-        $('.zwift-color').css('background-color: #000;')
+        $('.input-group').find("input[type=text]").val("")
+        $('.zwift-cat').text('?')
+        $('.zwift-color').css('background-color', '#000')
     })
 })
